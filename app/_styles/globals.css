@@ -38,3 +38,51 @@
   --rdp-background-color: theme("colors.accent.600") !important;
   margin: 0 !important;
 }
+
+@media (max-width: 640px) {
+  .rdp {
+    --rdp-cell-size: 30px !important;
+    font-size: 0.9rem;
+  }
+
+  .rdp-months {
+    display: block;
+  }
+}
+
+/* iPhone SE (375px width) */
+@media (max-width: 375px) {
+  .rdp {
+    --rdp-cell-size: 26px !important;
+    font-size: 0.8rem;
+  }
+
+  .rdp-caption_label {
+    font-size: 0.9rem;
+  }
+
+  .rdp-nav_button {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* iPhone 14 Pro Max width range */
+@media (min-width: 390px) and (max-width: 430px) {
+  .rdp {
+    --rdp-cell-size: 30px !important;
+    font-size: 0.92rem;
+  }
+}
+
+/* iPad Mini portrait/landscape range */
+@media (min-width: 768px) and (max-width: 834px) {
+  .rdp {
+    --rdp-cell-size: 34px !important;
+    font-size: 1rem;
+  }
+
+  .rdp-months {
+    gap: 1rem;
+  }
+}

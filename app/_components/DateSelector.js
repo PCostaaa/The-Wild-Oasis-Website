@@ -6,6 +6,7 @@ import {
   isSameDay,
   isWithinInterval,
 } from "date-fns";
+import { useEffect, useState } from "react";
 
 import { DayPicker } from "react-day-picker";
 import "react-day-picker/dist/style.css";
@@ -23,6 +24,22 @@ function isAlreadyBooked(range, datesArr) {
 
 function DateSelector({ settings, cabin, bookedDates }) {
   const { range, setRange, resetRange } = useReservation();
+  const [showTwoMonths, setShowTwoMonths] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 768px)");
+
+    const updateMonths = (event) => setShowTwoMonths(event.matches);
+    setShowTwoMonths(mediaQuery.matches);
+
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener("change", updateMonths);
+      return () => mediaQuery.removeEventListener("change", updateMonths);
+    }
+
+    mediaQuery.addListener(updateMonths);
+    return () => mediaQuery.removeListener(updateMonths);
+  }, []);
 
   const displayRange = isAlreadyBooked(range, bookedDates) ? {} : range;
 
@@ -36,7 +53,7 @@ function DateSelector({ settings, cabin, bookedDates }) {
   return (
     <div className="flex flex-col justify-between">
       <DayPicker
-        className="pt-12 place-self-center"
+        className="pt-8 sm:pt-12 place-self-center"
         mode="range"
         onSelect={setRange}
         selected={displayRange}
@@ -46,15 +63,15 @@ function DateSelector({ settings, cabin, bookedDates }) {
         fromDate={new Date()}
         toYear={new Date().getFullYear() + 5}
         captionLayout="dropdown"
-        numberOfMonths={2}
+        numberOfMonths={showTwoMonths ? 2 : 1}
         disabled={(curDate) =>
           isPast(curDate) ||
           bookedDates.some((date) => isSameDay(date, curDate))
         }
       />
 
-      <div className="flex items-center justify-between px-8 bg-accent-500 text-primary-800 h-[72px]">
-        <div className="flex items-baseline gap-6">
+      <div className="flex flex-wrap items-center justify-between gap-3 sm:gap-4 px-4 sm:px-6 lg:px-8 py-3 sm:py-4 bg-accent-500 text-primary-800 min-h-[72px]">
+        <div className="flex flex-wrap items-baseline gap-3 sm:gap-6">
           <p className="flex gap-2 items-baseline">
             {discount > 0 ? (
               <>

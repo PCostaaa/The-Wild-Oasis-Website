@@ -1,19 +1,15 @@
 "use client";
 
-import { useState } from "react";
-
 import { updateGuest } from "@/app/_lib/actions";
 import SubmitButton from "@/app/_components/SubmitButton";
 
 function UpdateProfileForm({ children, guest }) {
-  const [count, setCount] = useState();
-
   const { fullName, email, nationality, nationalID, countryFlag } = guest;
 
   return (
     <form
       action={updateGuest}
-      className="bg-primary-900 py-8 px-12 text-lg flex gap-6 flex-col"
+      className="bg-primary-900 py-8 px-4 sm:px-8 lg:px-12 text-base sm:text-lg flex gap-6 flex-col"
     >
       <div className="space-y-2">
         <label>Full name</label>
@@ -57,7 +53,7 @@ function UpdateProfileForm({ children, guest }) {
         />
       </div>
 
-      <div className="flex justify-end items-center gap-6">
+      <div className="flex justify-start sm:justify-end items-center gap-6">
         <SubmitButton pendingLabel="Updating...">Update profile</SubmitButton>
       </div>
     </form>
