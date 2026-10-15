@@ -5,10 +5,10 @@ Built with Next.js (App Router) as part of Jonas Schmedtmann's *Ultimate React C
 
 ## 📸 Screenshots
 
-![Homepage](./screenshots/home.png)
-![Cabins list with capacity filter](./screenshots/cabins.png)
-![Booking a cabin with the date range picker](./screenshots/reservation.png)
-![Guest area with reservations](./screenshots/my-reservations.png)
+![Homepage](./home.png)
+![Cabins list with capacity filter](.cabins.png)
+![Booking a cabin with the date range picker](./reservation.png)
+![Guest area with reservations](./my-reservations.png)
 
 ## 🚀 Features
 
