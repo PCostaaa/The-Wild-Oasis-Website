@@ -3,8 +3,6 @@
 Customer-facing website for The Wild Oasis hotel, where guests can browse luxury cabins, book their stay and manage their reservations.
 Built with Next.js (App Router) as part of Jonas Schmedtmann's *Ultimate React Course* (Udemy).
 
-**Live demo:** [the-wild-oasis-website-2zug.vercel.app](https://the-wild-oasis-website-2zug.vercel.app) · **Admin dashboard:** [the-wild-oasis](https://github.com/PCostaaa/the-wild-oasis)
-
 ## 📸 Screenshots
 
 ![Homepage](./screenshots/home.png)
