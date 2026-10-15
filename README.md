@@ -1,38 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🏔️ The Wild Oasis — Guest Website
 
-# 🏔️ The Wild Oasis (Guest Edition)
+Customer-facing website for The Wild Oasis hotel, where guests can browse luxury cabins, book their stay and manage their reservations.
+Built with Next.js (App Router) as part of Jonas Schmedtmann's *Ultimate React Course* (Udemy).
 
-## Getting Started
+**Live demo:** [the-wild-oasis-website-2zug.vercel.app](https://the-wild-oasis-website-2zug.vercel.app) · **Admin dashboard:** [the-wild-oasis](https://github.com/PCostaaa/the-wild-oasis)
 
-First, run the development server:
+## 📸 Screenshots
+
+![Homepage](./screenshots/home.png)
+![Cabins list with capacity filter](./screenshots/cabins.png)
+![Booking a cabin with the date range picker](./screenshots/reservation.png)
+![Guest area with reservations](./screenshots/my-reservations.png)
+
+## 🚀 Features
+
+- **Cabins** – browse all cabins and filter by capacity
+- **Cabin details** – description, capacity, pricing and discounts
+- **Reservations** – pick dates in a range calendar (booked dates are blocked), choose guests and add breakfast
+- **Google login** – authentication with NextAuth
+- **Guest area** – update profile (nationality and ID), view, edit and cancel reservations
+- **Server-side rendering** – Server Components and Server Actions, with data from Supabase
+
+## 🧰 Tech stack
+
+Next.js 14 (App Router) · React · NextAuth · Supabase · Tailwind CSS · react-day-picker · date-fns · Heroicons
+
+## ⚙️ Getting started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Requires Supabase and Google OAuth credentials in a `.env.local` file.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 👤 Author
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**Pedro Costa** – Web Developer
+[Portfolio](https://pcostaaa.github.io/Portfolio/) · [LinkedIn](https://www.linkedin.com/in/pedroabcosta/) · [Behance](https://www.behance.net/pedrocosta262)
